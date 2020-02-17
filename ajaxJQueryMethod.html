@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    </head>
+    <body onload="myfun()">
+        <div class="container w-75" >
+            
+            <div class="card-header m-5" id="table">
+                <div class="card " id="table1">
+
+                </div>
+    
+            </div>
+           
+       </div>
+    </body>
+
+    <script>
+        function myfun(){
+        $.ajax({
+            "method":"GET",
+            "url":"https://jsonplaceholder.typicode.com/users",
+            success:function(res){
+                var card=""
+                res.forEach(function(val,ind) {
+                card+="<div class='card mt-4' ><div class='card-header text-center anr'>"+val.id+
+                  "</div><div class='text-center card-body abc'>"+ "<div class='row mt-2'><div class='col-md-6'>"+
+                  val.name+"</div>"+ "<div class='col-md-6'>"+val.username+"</div></div>"+ 
+                   "<div class='row mt-2'><div class='col-md-6'>"+val.phone+"</div>"+
+        "<div class='col-md-6'>"+val.email+"</div></div>"+  
+      "<div class='row mt-2'><div class='col-md-6'>"+val.address.street+"</div>"+
+     "<div class='col-md-6'>"+val.address.city+"</div></div>"+"</div><div class='card-footer text-center'>"+
+     val.website+"</div></div>" 
+            });
+            document.getElementById("table").innerHTML=card
+        }
+        })
+        }
+        $("#table").bind("click", function(){
+           $("#table1").toggleClass("d-none")
+
+        });
+
+
+    </script>
+</html>

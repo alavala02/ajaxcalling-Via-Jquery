@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="head d-flex justify-content-between bg-success align-items-center">
+                    <img class="" src= "/home/anr/pp(1)" style="height:70px ;width: 50px;" alt="logo">
+                    <a href="logout.html">Logout</a>
+            </div>
+
+            <div class="card">
+                <div class="card-header bg-info">
+                    <h2>Click-1</h2>
+                </div>
+                    <div class="card-body " id="anr">
+                        <p>
+                        DescriptionGoogle News is a news aggregator app developed by Google. It presents a continuous, 
+                        customizable flow of articles organized from thousands of publishers and magazines. Google News 
+                        is available as an app on Android, iOS, and the Web. Google released a beta version in September 
+                        2002 and the official app in January 2006. Wikipedia
+                        </p>
+                    </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header bg-primary">
+                    <h3>Click-2</h3>
+                </div>
+                        <div class="card-body" id="abc">
+                            <p>
+                                2222DescriptionGoogle News is a news aggregator app developed by Google. It presents a continuous, 
+                                customizable flow of articles organized from thousands of publishers and magazines. Google News 
+                                is available as an app on Android, iOS, and the Web. Google released a beta version in September 
+                                2002 and the official app in January 2006. Wikipedia
+                            </p>
+                        </div>
+
+            </div>
+            
+        </div>
+    </body>
+
+    <script>
+       $("h2").bind("click", function(){
+           $("#anr").toggleClass("d-none")
+
+        });
+
+        $("h3").bind("click", function(){
+           $("#abc").toggleClass("d-none")
+
+        });
+    </script>
+   
+</html>
